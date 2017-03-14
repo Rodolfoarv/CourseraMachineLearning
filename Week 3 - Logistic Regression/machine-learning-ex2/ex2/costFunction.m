@@ -21,8 +21,9 @@ grad = zeros(size(theta));
 %
 hOfX = sigmoid(X * theta);
 J = (1.0 / m) * (-y' * log(hOfX) - (1 - y')*log(1-hOfX));
+disp (J)
 
-
+grad = ( 1.0 / m) * (hOfX - y)' * X;
 
 
 
