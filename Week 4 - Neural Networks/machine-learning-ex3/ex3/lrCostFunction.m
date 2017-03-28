@@ -39,7 +39,7 @@ grad = zeros(size(theta));
 %Results into a 5x1
 hOfX = sigmoid (X * theta); %Same operation could be done (theta' * X)
 J = ((1.0/m) * (-y'*log(hOfX) - ((1-y)'*(log(1-hOfX)))) );
-grad = (1/m * (X'*(hOfX - y)));
+grad = ( 1.0 / m) * (hOfX - y)' * X;
 
 newThetaParameters = [0; theta(2:length(theta))];
 J = J + (lambda / (2*m))* sum(newThetaParameters .^ 2);
