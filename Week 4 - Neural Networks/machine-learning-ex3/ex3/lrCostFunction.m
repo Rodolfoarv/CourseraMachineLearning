@@ -40,6 +40,7 @@ grad = zeros(size(theta));
 hOfX = sigmoid (X * theta); %Same operation could be done (theta' * X)
 
 J = (1.0/m) * (-y'*log(hOfX) - ((1-y)'*(log(1-hOfX))));
+grad = 1/m * (X'*(hOfX - y));
 
 
 
