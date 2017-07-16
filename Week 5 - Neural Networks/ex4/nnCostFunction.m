@@ -84,7 +84,8 @@ J = 1/m * sum(sum(-1 * yVec .* log(hOfX)-(1-yVec) .* log(1-hOfX)));
 
 %% Part 1.2  Regularized Cost Function
 
-
+regularizedTerm = (lambda / ( 2 * m) ) * (sum(sum(Theta1(:, 2:end).^2)) + sum(sum(Theta2(:, 2:end).^2)))
+J = J + regularizedTerm
 
 
 %% Part 2
