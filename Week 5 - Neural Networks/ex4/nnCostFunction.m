@@ -62,7 +62,35 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+%% Part 1.1 Feedforward the network and return the cost in the variable J
 
+a1 = [ones(m, 1) X];
+
+z2 = a1 * Theta1';
+a2 = sigmoid(z2);
+a2 = [ones(size(a2,1), 1) a2];
+
+z3 = a2 * Theta2';
+a3 = sigmoid(z3)
+hOfX = a3
+
+yVec = zeros(m,num_labels); % make a vector for each training example that will contain the class
+
+for i = 1:m
+    yVec(i,y(i)) = 1;
+end
+
+J = 1/m * sum(sum(-1 * yVec .* log(hOfX)-(1-yVec) .* log(1-hOfX)));
+
+%% Part 1.2  Regularized Cost Function
+
+
+
+
+%% Part 2
+
+
+%% Part 3
 
 
 
