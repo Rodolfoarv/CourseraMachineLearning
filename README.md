@@ -16,6 +16,7 @@ The project is divided with different folders which shows assigments during the 
   - **Week 5:** Neural Networks
   - **Week 6:** Advice for applying Machine Learning
   - **Week 7:** Suppor Vector Machines
+  - **Week 8:** Clustering and PCA
 
 ## Installing the application
     # Setup the project
