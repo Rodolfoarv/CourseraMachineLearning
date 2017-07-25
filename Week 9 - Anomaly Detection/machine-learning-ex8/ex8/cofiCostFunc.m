@@ -43,6 +43,8 @@ Theta_grad = zeros(size(Theta));
 Inner_J = (X * Theta' - Y).^2;
 J = (1/2) * sum(Inner_J(R == 1))
 
+X_grad = ((X * Theta' - Y) .* R) * Theta 
+Theta_grad = ((X * Theta' - Y) .* R)' * X 
 
 
 
