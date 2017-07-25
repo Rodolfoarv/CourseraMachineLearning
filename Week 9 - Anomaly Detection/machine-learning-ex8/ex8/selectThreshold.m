@@ -22,17 +22,17 @@ for epsilon = min(pval):stepsize:max(pval)
     %               
     % Note: You can use predictions = (pval < epsilon) to get a binary vector
     %       of 0's and 1's of the outlier predictions
-
-
-
-
-
-
-
-
-
-
-
+    
+    predictions = (pval < epsilon)
+    
+    fp = sum((predictions == 1) & (yval == 0)) % Algorithm as an anomaly, ground truth not an anomaly
+    tp = sum((predictions == 1) & (yval == 1)) % Algorithm as an anomaly, ground truth as an anomaly
+    fn = sum((predictions == 0) & (yval == 1)) % Algorithm as not an anomaly, ground truth as an anomaly
+    
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    
+    F1 = (2 * precision * recall) / (precision + recall)
 
 
     % =============================================================
