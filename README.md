@@ -17,6 +17,7 @@ The project is divided with different folders which shows assigments during the 
   - **Week 6:** Advice for applying Machine Learning
   - **Week 7:** Suppor Vector Machines
   - **Week 8:** Clustering and PCA
+  - **Week 9:** Anomaly Detection and Recommender Systems
 
 ## Installing the application
     # Setup the project
